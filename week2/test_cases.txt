@@ -1,0 +1,18 @@
+
+===
+
+https://class.coursera.org/principlescomputing1-005/forum/thread?thread_id=107
+
+Well, I got 100% passing from 10 test cases, but I cheated by using a heavily tailored set of tests. It's not by any means comprehensive real-world test coverage. I also went way overboard on this...
+
+I started with an empty list of TEST_CASES. Each time OwlTest gave me an implementation that my list didn't trip up, I pasted that code into my codeskulptor project and ran it against every possible combination of 1, 2, 3, 4, 5, and 6 length test cases (using the numbers 0,2,4,8) and compared it against my own merge function, which OwlTest claimed was complete. It sounds like a lot of combinations, but it's actually only about 5,500, which codeskulptor handled quite quickly as long as I commented out any print statements. Granted, it's possible there could be a bug in my implementation of merge that OwlTest didn't catch, but that doesn't matter here because all that matters for this very specific case is that my merge results were consistent with OwlTest's.
+
+Then, I saved and set aside a list of failing test cases for that implementation and picked one failing case at random and added it to my TEST_CASES list. Then ran that through OwlTest and repeated all the above with the new failing implementation OwlTest gave me.
+
+After about 30 iterations, I had a TEST_CASES list that passed 100%. Then, I took all the failed cases I had set aside (just under 50,000 at that point) and wrote a program to count their frequencies. I used the most popular ones to eliminate as many failed implementations at once as I could and kept going with the most popular remaining cases until all the failed implementations had been eliminated. After that was done, about 6 cases gave me complete coverage for all 30 failed implementations OwlTest had shown me. I plugged those 6 back into OwlTest and had to go through a few more rounds of bouncing between OwlTest, my exhaustive combinations test, and my optimization program until the optimization program result gave me 100% OwlTest coverage. And that's the final 10 cases
+
+10 can probably be improved on a little bit. First of all, the most popular failed test cases occurred in 15 bad implementations. But there were 7 or 8 cases with that frequency. I picked one basically at random, but possibly selecting an alternative one could lead to more efficient coverage. Also, I probably saw about 40 failing implementations out of what seems to be around 150 total that OwlTest checks your tests against. Obviously, with such a tailored list of test cases, the greater the number of tests you can pull data from, the more efficient the results, but I'm not sure how OwlTest decides which results to show you and it would be pretty tricky to get it to show you every single failed implementation since adding a single test case usually eliminates multiple implementations.
+
+I'm happy to share the 10 that get complete coverage, but I'm not sure it's allowed so I'll leave them out for now. For what it's worth, there were 2 single-number test cases, 1 two-number case, 1 four-number case, 1 five-number, and 5 six-numbers.
+
+===

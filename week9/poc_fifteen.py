@@ -871,7 +871,6 @@ def test_solve_puzzle():
     print 'End pos'
     print obj
 
-
 def all_tests():
     '''
     All test functions
